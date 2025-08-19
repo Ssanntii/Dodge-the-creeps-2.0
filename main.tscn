@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjkjlfnd64ubf"]
+[gd_scene load_steps=9 format=3 uid="uid://bjkjlfnd64ubf"]
 
 [ext_resource type="Script" uid="uid://dmematjo1didd" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cg634avltfl6u" path="res://mob.tscn" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://627uriwbpr6p" path="res://art/tilemap_dungeon.jpg" id="3_272bh"]
 [ext_resource type="PackedScene" uid="uid://b28koa0pw834r" path="res://player.tscn" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://nbsc0cya8ewt" path="res://hud.tscn" id="4_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://bnepg272fxbqe" path="res://art/House In a Forest Loop.ogg" id="5_7mycd"]
@@ -17,13 +18,17 @@ point_count = 6
 script = ExtResource("1_h2yge")
 mob_scene = ExtResource("2_1bvp3")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -281.0
+offset_top = -161.0
+offset_right = 263.0
+offset_bottom = 143.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.66537, 0, 0.167116, 1)
+texture = ExtResource("3_272bh")
 
 [node name="Player" parent="." instance=ExtResource("3_lquwl")]
 
